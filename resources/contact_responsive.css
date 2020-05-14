@@ -1,0 +1,244 @@
+@media (max-width: 1100px) {
+  #header {
+    grid-template-columns: calc(30% - 20px) calc(70% - 20px);
+    height: auto;
+  }
+  #header #logo {
+    padding: 0px 40%;
+  }
+}
+@media (max-width: 900px) {
+  #footer {
+    padding: 10px 0px;
+  }
+  #footer .seccion-pie h4 {
+    width: 80%;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  #footer .seccion-pie .icon {
+    width: 60px;
+    height: 60px;
+    font-size: 35px;
+  }
+  #footer .seccion-pie .icon:hover {
+    font-size: 30px;
+  }
+  #footer .seccion-pie p {
+    height: 70px;
+    font-size: 16px;
+  }
+  #footer .seccion-pie img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 750px) {
+  #header #form-search {
+    padding-top: 0px;
+  }
+  #header #form-search input {
+    width: calc(60% - 10px);
+  }
+  #header #form-search button {
+    width: calc(30% - 25px);
+  }
+
+  #footer .seccion-pie .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+  }
+  #footer .seccion-pie .icon:hover {
+    font-size: 26px;
+  }
+  #footer .seccion-pie p {
+    height: 60px;
+  }
+  #footer .seccion-pie img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 650px) {
+  #wrap-all-content {
+    position: relative;
+  }
+
+  #header {
+    grid-template-columns: calc(30% - 50px) calc(70% - 20px);
+    grid-template-rows: 1fr 1fr;
+    height: 180px;
+  }
+  #header #logo {
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  #header #logo img {
+    width: 50px;
+    height: 50px;
+  }
+  #header #form-search {
+    padding-top: 20px;
+  }
+  #header #form-search input {
+    padding: 5px 5px;
+    width: calc(70% - 10px);
+  }
+  #header #form-search button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: calc(25% - 25px);
+  }
+  #header #form-search button:hover {
+    font-size: 16px;
+  }
+  #header #logomenu {
+    display: block;
+    grid-column: 1/3;
+    width: 100%;
+  }
+  #header #menu {
+    position: absolute;
+    top: 180px;
+    display: none;
+    grid-column: 1/3;
+    width: 80%;
+    height: calc(100% - 180px);
+    z-index: 2;
+    background: #222;
+  }
+  #header #menu ul {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 500px;
+    padding: 0px 0px;
+  }
+  #header #menu ul li {
+    text-align: left;
+    padding: 15px 30px;
+  }
+  #header #menu ul li .submenu {
+    z-index: 3;
+    position: absolute;
+    display: none;
+    width: 100%;
+    background: #FFF;
+  }
+  #header #menu ul li .submenu li {
+    width: calc(100% - 60px);
+    border-bottom: 1px solid black;
+  }
+  #header #menu ul li .submenu li a {
+    display: block;
+    width: 100%;
+  }
+  #header #menu ul li:hover {
+    background: #222;
+  }
+
+  #main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 30% 60%;
+    grid-template-areas: "titulo" "contenido" "ubicacion";
+    width: 100%;
+    padding: 0px 0px;
+  }
+  #main #redes-sociales {
+    grid-area: contenido;
+  }
+  #main #redes-sociales div {
+    grid-area: contenido;
+    padding-left: 10%;
+  }
+  #main #redes-sociales div p {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  #main #redes-sociales div a {
+    margin-top: 5px;
+  }
+  #main #ubicacion iframe {
+    width: 80%;
+    height: 60%;
+    margin: 0px auto;
+  }
+
+  #footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 600px;
+  }
+  #footer .seccion-pie {
+    justify-content: center;
+  }
+  #footer .seccion-pie .icon {
+    width: 70px;
+    height: 70px;
+    font-size: 36px;
+  }
+  #footer .seccion-pie .icon:hover {
+    font-size: 30px;
+  }
+  #footer .seccion-pie p {
+    height: 70px;
+    font-size: 20px;
+  }
+  #footer .seccion-pie img {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 400px) {
+  #header #logo img {
+    width: 35px;
+    height: 35px;
+  }
+  #header #logomenu {
+    font-size: 24px;
+    padding-top: 0px;
+  }
+
+  #main {
+    grid-gap: 10px;
+  }
+  #main h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  #main section h2 {
+    font-size: 20px;
+    letter-spacing: 0px;
+  }
+}
+@media (max-width: 350px) {
+  #header {
+    height: 120px;
+  }
+  #header #logo {
+    padding-top: 0px;
+  }
+  #header #logo img {
+    width: 30px;
+    height: 30px;
+  }
+  #header #form-search {
+    padding-top: 0px;
+  }
+  #header #form-search button {
+    padding: 3px 7px;
+    font-size: 10px;
+    width: calc(25% - 20px);
+  }
+  #header #logomenu {
+    font-size: 20px;
+  }
+  #header #menu {
+    top: 120px;
+    height: calc(100% - 120px);
+  }
+}
+
+/*# sourceMappingURL=contact_responsive.css.map */

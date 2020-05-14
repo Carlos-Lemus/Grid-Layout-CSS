@@ -1,0 +1,307 @@
+@font-face {
+  font-family: oswald;
+  src: url("fonts/Oswald-VariableFont_wght/Oswald-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: OpenSansCondensed;
+  src: url("fonts/OpenSansCondensed/OpenSansCondensed-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: WebSymbolsRegular;
+  src: url("fonts/WebSymbols-Regular/websymbols-regular-webfont.eot") format("embedded-opentype"), url("fonts/WebSymbols-Regular/websymbols-regular-webfont.eot#iefix") format("embedded-opentype"), url("fonts/WebSymbols-Regular/websymbols-regular-webfont.ttf") format("truetype"), url("fonts/WebSymbols-Regular/websymbols-regular-webfont.woff") format("woff"), url("fonts/WebSymbols-Regular/websymbols-regular-webfont.svg?#WebSymbolsRegular");
+}
+@keyframes animation-titulo {
+  from {
+    background-position: 100% 100%;
+  }
+  to {
+    background-position: 50% 50%;
+  }
+}
+@keyframes animation-texto-titulo {
+  0% {
+    letter-spacing: 0px;
+  }
+  100% {
+    letter-spacing: 30px;
+  }
+}
+@keyframes animation-article-premium {
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.icon {
+  font-family: WebSymbolsRegular;
+}
+
+#wrap-all-content {
+  width: 100%;
+  height: auto;
+  max-width: 2000px;
+  margin: 0px auto;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: calc(10% - 20px) calc(50% - 20px) calc(40% - 20px);
+  grid-gap: 20px;
+  width: 100%;
+  height: 100px;
+  background: #222;
+  align-items: center;
+  transition: all 300ms;
+}
+#header #logo {
+  padding: 0px 20px;
+}
+#header #logo img {
+  width: 70px;
+  height: 70px;
+}
+#header #form-search input {
+  width: calc(70% - 20px);
+  padding: 10px 10px;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  background: transparent;
+  color: #999;
+}
+#header #form-search input:focus {
+  color: #FFF;
+}
+#header #form-search button {
+  width: calc(20% - 50px);
+  margin-left: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background: #e74c3c;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 300ms;
+}
+#header #form-search button:hover {
+  font-size: 18px;
+  background: #ff6348;
+}
+#header #logomenu {
+  display: none;
+  width: 100%;
+  color: #FFF;
+  padding: 20px;
+  font-size: 30px;
+  border-bottom: 1px solid #FFF;
+}
+#header #menu ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0px 20px;
+  list-style: none;
+}
+#header #menu ul li {
+  position: relative;
+  text-align: center;
+  padding: 15px 10px;
+  transition: all 300ms;
+}
+#header #menu ul li a {
+  display: block;
+  width: 100%;
+  font: bold 1.3rem OpenSansCondensed;
+  color: #FFF;
+  text-decoration: none;
+}
+#header #menu ul li .submenu {
+  position: absolute;
+  display: none;
+  width: 120%;
+  top: 60px;
+  left: 0px;
+  background: #FFF;
+  padding-left: 0px;
+  padding-right: 0px;
+  border-radius: 0px 5px 5px 0px;
+}
+#header #menu ul li .submenu li {
+  display: block;
+  width: calc(100% - 20px);
+  border-bottom: 1px solid black;
+}
+#header #menu ul li .submenu li:hover {
+  background: #444;
+}
+#header #menu ul li .submenu li:hover a {
+  color: lightblue;
+}
+#header #menu ul li:hover {
+  background: #FFF;
+}
+#header #menu ul li:hover .submenu {
+  display: block;
+}
+#header #menu ul li:hover a {
+  color: firebrick;
+}
+
+#main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 15% 85%;
+  grid-template-areas: "titulo titulo" "contenido ubicacion";
+  grid-gap: 20px;
+  width: 80%;
+  height: 700px;
+  max-height: 700px;
+  min-height: 700px;
+  padding: 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px black;
+}
+#main h1 {
+  grid-area: titulo;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  font: bold 30px oswald;
+  width: 100%;
+  border-bottom: 2px solid black;
+  letter-spacing: 2px;
+}
+#main section {
+  display: grid;
+  grid-template-rows: 20% 80%;
+  grid-template-areas: "titulo" "contenido";
+}
+#main section h2 {
+  grid-area: titulo;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font: bold 24px oswald;
+  letter-spacing: 1px;
+}
+#main #redes-sociales {
+  grid-area: contenido;
+}
+#main #redes-sociales div {
+  grid-area: contenido;
+  padding-left: 10%;
+}
+#main #redes-sociales div p {
+  font: normal 18px OpenSansCondensed;
+  font-weight: 600;
+  margin-top: 30px;
+}
+#main #redes-sociales div a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #009432;
+}
+#main #redes-sociales div a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  transition: all 300ms;
+}
+#main #ubicacion {
+  grid-area: ubicacion;
+}
+#main #ubicacion iframe {
+  grid-area: contenido;
+  width: 100%;
+  height: 70%;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  height: 150px;
+  background: #222;
+  margin-top: 50px;
+  padding: 10px 0px;
+}
+#footer .seccion-pie {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "encabezado encabezado encabezado encabezado encabezado" ". contenido1 contenido2 contenido3 .";
+  grid-gap: 20px;
+  overflow: hidden;
+}
+#footer .seccion-pie h4 {
+  grid-area: encabezado;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+  margin: 0px auto;
+  background: #0984e3;
+  color: #FFF;
+  border-radius: 10px;
+  font: bold 20px oswald;
+  letter-spacing: 2px;
+}
+#footer .seccion-pie .contenido1-sections-footer {
+  grid-area: contenido1;
+}
+#footer .seccion-pie .contenido2-sections-footer {
+  grid-area: contenido2;
+}
+#footer .seccion-pie .contenido3-sections-footer {
+  grid-area: contenido3;
+}
+#footer .seccion-pie .icon {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  color: #FFF;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 20px;
+  transition: all 300ms;
+}
+#footer .seccion-pie .icon:hover {
+  color: #aaa;
+  font-size: 34px;
+}
+#footer .seccion-pie p {
+  grid-column: 2/5;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  font: bold 18px OpenSansCondensed;
+  color: #FFF;
+}
+#footer .seccion-pie img {
+  width: 80px;
+  height: 80px;
+}
+#footer .seccion-pie img:hover {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=contact_styles.css.map */
